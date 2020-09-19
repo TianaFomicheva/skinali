@@ -4,10 +4,10 @@
     left: 0
     width: 100%
     background-color: #fff
+    z-index: 99
     &-wrap
          display: flex
          align-items: center
-         min-height: 20px
          justify-content: space-between
 
     &__mobile,&__landline
@@ -33,7 +33,29 @@
 
 
 .menu
-     &-button
+    position: fixed
+    top: 80px
+    left: 0
+    padding-bottom: 16px
+    padding-top: 16px
+    width: 100%
+    background-color: $primary
+    z-index: 0
+    transform: translateY(-200%)
+    &__nav
+        display: flex
+        align-items: center
+        justify-content: space-around
+      
+    &_active
+        transform: translateY(0)
+
+    &__link
+        text-transform: uppercase
+        text-decoration: none
+        font-size: 17px
+        color: #fff
+    &-button
          display: flex
          align-items: center
          flex-direction: column
@@ -65,11 +87,25 @@
         color: $text-color-light
 
 
+@media ( max-width: 768px)
+    .navbar
+        &__mobile,&__landline
+            display: none
 
 
+@media ( max-width: 576px)
+    .logo 
+        display: none
 
+@media ( max-width: 576px)
+    .menu
+        &-button
+            height: 60px
 
-
+        &__nav
+            flex-direction: column
+        &__link
+            margin-bottom: 20px    
 
 
          

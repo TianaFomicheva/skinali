@@ -7,6 +7,25 @@
   margin: auto;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
 @font-face {
   font-family: 'Proxima Nova Light';
   src: url("../fonts/ProximaNova-Light.eot");
@@ -55,10 +74,16 @@ body {
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
+@media (max-width: 576px) {
+  .button .button-o {
+    font-size: 10px;
+  }
+}
+
 .hero {
   background: #f1f1f1 url("../img/skinali.jpg") no-repeat center top 80px;
   background-size: cover;
-  padding-top: 120px;
+  padding-top: 150px;
   padding-bottom: 270px;
 }
 
@@ -83,12 +108,12 @@ body {
   left: 0;
   width: 100%;
   background-color: #fff;
+  z-index: 99;
 }
 
 .navbar-wrap {
   display: flex;
   align-items: center;
-  min-height: 20px;
   justify-content: space-between;
 }
 
@@ -110,6 +135,35 @@ body {
   color: #7b7b7b;
   text-decoration: none;
   display: block;
+}
+
+.menu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  width: 100%;
+  background-color: #507fe1;
+  z-index: 0;
+  transform: translateY(-200%);
+}
+
+.menu__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu_active {
+  transform: translateY(0);
+}
+
+.menu__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 17px;
+  color: #fff;
 }
 
 .menu-button {
@@ -146,4 +200,28 @@ body {
   display: block;
   color: #6b6b6b;
   color: #7b7b7b;
+}
+
+@media (max-width: 768px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-button {
+    height: 60px;
+  }
+  .menu__nav {
+    flex-direction: column;
+  }
+  .menu__link {
+    margin-bottom: 20px;
+  }
 }
