@@ -91,6 +91,7 @@ img {
   background-color: #507fe1;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
@@ -526,4 +527,56 @@ input[type="checkbox"]:checked + label:before {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.price-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  position: relative;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.price-card__text {
+  padding: 20px;
+  font-size: 15px;
+}
+
+.price-card__title {
+  margin: 0;
+}
+
+.price-card__cost {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.price-card__tag {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.price-card__button {
+  text-align: center;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.05);
+  height: 80px;
+  padding: 7px;
+}
+
+.price-card:hover .price-card__button {
+  z-index: 99;
+}
+
+.price-card:hover .price-card__tag {
+  z-index: -1;
 }
