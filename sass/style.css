@@ -529,6 +529,10 @@ input[type="checkbox"]:checked + label:before {
   align-items: center;
 }
 
+.price__title {
+  text-align: center;
+}
+
 .price-block {
   display: flex;
   justify-content: space-between;
@@ -579,4 +583,67 @@ input[type="checkbox"]:checked + label:before {
 
 .price-card:hover .price-card__tag {
   z-index: -1;
+}
+
+@media (max-width: 760px) {
+  .price-block {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 400px) {
+  .price-card__button {
+    font-size: 10px;
+  }
+}
+
+.steps-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.step {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.step:last-child:before {
+  display: none;
+}
+
+.step__title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.step__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.step:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: rgba(126, 123, 120, 0.8);
+  display: block;
+  position: absolute;
+  top: 40%;
+  right: -100%;
+}
+
+@media (max-width: 991px) {
+  .step {
+    width: 33%;
+  }
+  .step:before {
+    display: none;
+  }
+}
+
+@media (max-width: 5601px) {
+  .step {
+    width: 100%;
+  }
 }

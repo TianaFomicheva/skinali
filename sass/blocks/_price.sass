@@ -1,8 +1,11 @@
 .price
+    &__title
+        text-align: center
     &-block
         display: flex
         justify-content: space-between
         flex-wrap: wrap
+
     &-card
         position: relative
         margin-bottom: 10px
@@ -34,4 +37,14 @@
                 z-index: 99                
             .price-card__tag
                 z-index: -1    
+@media ( max-width: 760px)
+    .price
+        &-block
+            justify-content: space-around
+@media ( max-width: 400px)   
+    .price
+        &-card
+            &__button
+                font-size: 10px
+
 
