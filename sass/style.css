@@ -315,15 +315,22 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .offer-block {
-  background: #fff url("../img/offer-img.png") no-repeat center right;
-  background-size: contain;
-  padding: 80px;
+  padding: 60px;
   margin-top: -200px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
 
+.offer-block_calc-bg {
+  background: #fff url("../img/offer-img1.png") no-repeat center right;
+  background-size: contain;
+}
+
+.offer-block_price-bg {
+  background: #fff url("../img/offer-img2.png") no-repeat center right;
+  background-size: contain;
+}
+
 .offer__title {
-  padding-top: 25px;
   padding-bottom: 25px;
   text-transform: uppercase;
   font-family: 'Proxima Nova Semibold', sans-serif;
@@ -334,6 +341,7 @@ input[type="checkbox"]:checked + label:before {
   display: block;
   font-size: 21px;
   margin-bottom: 48px;
+  max-width: 640px;
 }
 
 .form__row {
@@ -371,6 +379,11 @@ input[type="checkbox"]:checked + label:before {
   background: #507fe1;
   text-transform: uppercase;
   color: #fff;
+}
+
+.form__policy {
+  margin-left: 45px;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
@@ -597,15 +610,19 @@ input[type="checkbox"]:checked + label:before {
   }
 }
 
+.step {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.steps {
+  background-color: #f8f8f8;
+}
+
 .steps-block {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.step {
-  position: relative;
-  margin-bottom: 30px;
 }
 
 .step:last-child:before {
@@ -642,8 +659,51 @@ input[type="checkbox"]:checked + label:before {
   }
 }
 
-@media (max-width: 5601px) {
+@media (max-width: 560px) {
   .step {
     width: 100%;
   }
+}
+
+.reviews {
+  background: #f2f3f5;
+}
+
+.reviews-slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews-slider__item {
+  text-align: center;
+}
+
+.reviews-slider__image {
+  display: block;
+  border: 2px  solid #6a99e9;
+  border-radius: 60%;
+  margin: 20px auto;
+}
+
+.reviews-slider__text {
+  font-size: 15px;
+  font-style: italic;
+  max-width: 370px;
+  height: 124px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.reviews-slider__text:after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  height: 10px;
+  transform: translateX(-50%);
+  border: 20px solid transparent;
+  border-top: 20px solid #ffffff;
 }

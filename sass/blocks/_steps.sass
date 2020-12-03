@@ -1,9 +1,12 @@
-.steps
-    &-block
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
+
 .step
+    &s
+        background-color: #f8f8f8
+        &-block
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            
     position: relative
     margin-bottom: 30px
     &:last-child
@@ -30,7 +33,7 @@
         width: 33%
         &:before
             display: none
-@media ( max-width: 5601px) 
+@media ( max-width: 560px) 
     .step
         width: 100%
 

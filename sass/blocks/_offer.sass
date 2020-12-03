@@ -1,14 +1,17 @@
 .offer
     padding: 129px 0
-    &-block
-        background: #fff url('../img/offer-img.png') no-repeat center right
-        background-size: contain
-        padding: 80px
+    &-block                
+        padding: 60px
         margin-top: -200px
         box-shadow: 0 15px 25px rgba(0,0,0, 0.1)
+        &_calc-bg
+            background: #fff url('../img/offer-img1.png') no-repeat center right
+            background-size: contain
+        &_price-bg
+            background: #fff url('../img/offer-img2.png') no-repeat center right
+            background-size: contain
 
     &__title
-        padding-top: 25px
         padding-bottom: 25px
         text-transform: uppercase
         +bold
@@ -17,6 +20,7 @@
         display: block
         font-size: 21px
         margin-bottom: 48px
+        max-width: 640px;
 .form
     &__row
         display: flex
@@ -41,12 +45,16 @@
         background: $primary
         text-transform: uppercase
         color: #fff
-@media ( max-width: 768px)
+    &__policy
+            margin-left: 45px
+            display: inline-block
+media ( max-width: 992px)
     .offer
         &-block
             background: none
             background-color: #fff
-            padding: 40px
+            padding: 40px            
+@media ( max-width: 768px)
     .form        
         &__row
             flex-direction: column
