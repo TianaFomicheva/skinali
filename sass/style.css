@@ -386,12 +386,15 @@ input[type="checkbox"]:checked + label:before {
   display: inline-block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .offer-block {
     background: none;
     background-color: #fff;
     padding: 40px;
   }
+}
+
+@media (max-width: 768px) {
   .form__row {
     flex-direction: column;
     align-items: unset;
@@ -706,4 +709,59 @@ input[type="checkbox"]:checked + label:before {
   transform: translateX(-50%);
   border: 20px solid transparent;
   border-top: 20px solid #ffffff;
+}
+
+.factory-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.factory-block__image {
+  flex-basis: 33%;
+}
+
+.factory-block__text {
+  flex-basis: 66%;
+  margin-left: 70px;
+  font-size: 18px;
+}
+
+.factory-block__text p {
+  margin-top: 0;
+}
+
+.contacts-block {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contacts-block__item {
+  text-align: center;
+}
+
+.contacts__image {
+  margin-bottom: 25px;
+}
+
+.contacts__text {
+  font-size: 18px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: #262626;
+  font-style: normal;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .contacts-block__item {
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 300px;
+  }
 }
