@@ -644,7 +644,7 @@ input[type="checkbox"]:checked + label:before {
 
 .step:before {
   content: '';
-  width: 100%;
+  width: 90%;
   height: 2px;
   background-color: rgba(126, 123, 120, 0.8);
   display: block;
@@ -763,5 +763,94 @@ input[type="checkbox"]:checked + label:before {
     width: 100%;
     margin-bottom: 30px;
     max-width: 300px;
+  }
+}
+
+.questions__title {
+  font-size: 30px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.questions__link {
+  font-size: 20px;
+  color: #507fe1;
+}
+
+.questions-block {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.footer {
+  padding: 40px 0;
+  background: #262626;
+  color: #fff;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.footer__subtitle {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.footer__copyright {
+  color: #767676;
+}
+
+.footer__pay-logo {
+  margin: 5px;
+}
+
+.footer__contacts {
+  text-align: right;
+}
+
+.footer__phone {
+  font-size: 20px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__mail {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-social__link {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+@media (max-width: 768px) {
+  .footer-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__contacts {
+    margin-top: 30px;
+    text-align: center;
   }
 }
