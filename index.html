@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фабрика скинали</title>
     <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
+    <link rel="stylesheet" href="css/slick.css">
 </head>
 
 <body>
@@ -15,12 +18,12 @@
             <div class="container">
                 <nav class="menu__nav">
                     <a href="#" class="menu__link">Главная</a>
-                    <a href="#" class="menu__link">Продукция</a>
-                    <a href="#" class="menu__link">Каталог</a>
-                    <a href="#" class="menu__link">Примеры работ</a>
-                    <a href="#" class="menu__link">Примерка изображения</a>
-                    <a href="#" class="menu__link">Стоимость дилерам</a>
-                    <a href="#" class="menu__link">О скинали</a>
+                    <a href="#features" class="menu__link">Преимущества</a>
+                    <a href="#catalog" class="menu__link">Каталог</a>
+                    <a href="#price" class="menu__link">Цены и виды</a>
+                    <a href="#reviews" class="menu__link">Отзывы</a>
+                    <a href="#contacts" class="menu__link">Контаксты</a>
+                    <a href="#offer" class="menu__link">Заказать</a>
                 </nav>
 
             </div>
@@ -49,7 +52,7 @@
                     </div>
 
 
-                    <button class="button-o navbar__button">Получить консультацию</button>
+                    <a href="#offer" class="button-o navbar__button">Получить консультацию</a>
                     <!-- /.button-o navbar__button -->
 
 
@@ -68,7 +71,7 @@
                 <!-- /.hero-title -->
                 <h1 class="hero__subtitle">от 3000р/м2</h1>
                 <!-- /.hero__subtitle -->
-                <button class="button hero__button">Заказать скинали</button>
+                <a href="#offer" class="button hero__button">Заказать скинали</a>
             </div>
             <!-- /.container -->
 
@@ -76,7 +79,7 @@
         <!-- /.hero -->
     </header>
     <main>
-        <section class="offer bg-secondary">
+        <section id="offer" class="offer bg-secondary">
             <div class="container">
                 <div class="offer__block offer-block offer-block_calc-bg">
                     <h2 class="offer__title">Оставьте заявку на расчет</h2>
@@ -84,8 +87,16 @@
                         скинали</span> <!-- /.offer__subtitle -->
                     <form action="" class="form offer__form">
                         <div class="form__row">
-                            <div class="form__group"><label for="" class="form__label">Вид стекла</label><input
-                                    type="text" class="input form__input"></div>
+                            <div class="form__group"><label for="" class="form__label">Вид стекла</label>
+                                <input type="hidden" class="" value="С печатью" id="select-type">
+                                <div class="select form__select">
+                                    <div class="select_checked">С печатью</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="С печатью">С печатью</li>
+                                        <li class="select__option" data-value="Без печати">Без печати</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="form__group"><label for="" class="form__label">Ширина, см</label><input
                                     type="text" class="input form__input"></div>
                             <div class="form__group"><label for="" class="form__label">Высота, см</label><input
@@ -115,7 +126,7 @@
                 </div>
             </div>
         </section>
-        <section class="features section">
+        <section id="features" class="features section">
             <container>
                 <h2 class="section-title section__title">Наши преимущества</h2>
                 <div class="features-block">
@@ -158,7 +169,7 @@
             </container>
         </section>
         <!-- /.offer -->
-        <section class="section catalog">
+        <section id="catalog" class="section catalog">
             <div class="container">
                 <h2 class="section-title section__title">Каталог скинали</h2>
                 <div class="catalog-block">
@@ -293,7 +304,7 @@
             </div>
             <!-- /.container -->
         </section>
-        <section class="section price">
+        <section id="price" class="section price">
             <div class="container">
                 <h2 class="section-title section__title">Цены и виды скинали</h2>
                 <div class="price-block">
@@ -464,64 +475,113 @@
                         <!-- /.step__title -->
                     </div>
                     <!-- /.step -->
-                    
-                        <div class="step">
-                            <img src="img/steps/step-2.png" alt="" class="step__image">
-                            <h4 class="step__title">Замер</h4>
-                            <!-- /.step__title -->
+
+                    <div class="step">
+                        <img src="img/steps/step-2.png" alt="" class="step__image">
+                        <h4 class="step__title">Замер</h4>
+                        <!-- /.step__title -->
+                    </div>
+                    <!-- /.step -->
+                    <div class="step">
+                        <img src="img/steps/step-3.png" alt="" class="step__image">
+                        <h4 class="step__title">Договор</h4>
+                        <!-- /.step__title -->
+                    </div>
+                    <!-- /.step -->
+                    <div class="step">
+                        <img src="img/steps/step-4.png" alt="" class="step__image">
+                        <h4 class="step__title">Дизайн</h4>
+                        <!-- /.step__title -->
+                    </div>
+                    <!-- /.step -->
+                    <div class="step">
+                        <img src="img/steps/step-5.png" alt="" class="step__image">
+                        <h4 class="step__title">Производство</h4>
+                        <!-- /.step__title -->
+                    </div>
+                    <!-- /.step -->
+                    <div class="step">
+                        <img src="img/steps/step-6.png" alt="" class="step__image">
+                        <h4 class="step__title">Монтаж</h4>
+                        <!-- /.step__title -->
+                    </div>
+                    <!-- /.step -->
+                </div>
+            </div>
+            <!-- /.steps-block -->
+            </div>
+        </section>
+
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section__title">До и после</h2>
+                <!-- /.section-title section__title -->
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/beforeafter/ba-1.jpg" alt="">
+                                <img src="img/beforeafter/ba1-0.jpg" alt="">
+                            </div>
                         </div>
-                        <!-- /.step -->
-                        <div class="step">
-                            <img src="img/steps/step-3.png" alt="" class="step__image">
-                            <h4 class="step__title">Договор</h4>
-                            <!-- /.step__title -->
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/beforeafter/ba-2.jpg" alt="">
+                                <img src="img/beforeafter/ba2-0.jpg" alt="">
+                            </div>
                         </div>
-                        <!-- /.step -->
-                        <div class="step">
-                            <img src="img/steps/step-4.png" alt="" class="step__image">
-                            <h4 class="step__title">Дизайн</h4>
-                            <!-- /.step__title -->
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/beforeafter/ba-3.jpg" alt="">
+                                <img src="img/beforeafter/ba3-0.jpg" alt="">
+                            </div>
                         </div>
-                        <!-- /.step -->
-                        <div class="step">
-                            <img src="img/steps/step-5.png" alt="" class="step__image">
-                            <h4 class="step__title">Производство</h4>
-                            <!-- /.step__title -->
-                        </div>
-                        <!-- /.step -->
-                        <div class="step">
-                            <img src="img/steps/step-6.png" alt="" class="step__image">
-                            <h4 class="step__title">Монтаж</h4>
-                            <!-- /.step__title -->
-                        </div>
-                        <!-- /.step -->
+
+                    </div>
+                    <div class="before-slider-arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/arrow-left.png" alt="">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/arrow-right.png" alt="">
+                        </button>
                     </div>
                 </div>
-                    <!-- /.steps-block -->
-                </div>
+            </div>
+            <!-- /.container -->
         </section>
-       
-        <section class="section reviews">
+        <!-- /.section before -->
+
+        <section id="reviews" class="section reviews">
             <div class="container">
                 <h2 class="section-title section__title">Отзывы наших клиентов</h2>
                 <!-- /.section-title section__title -->
                 <div class="reviews-slider">
                     <div class="reviews-slider__item">
-                        <div class="reviews-slider__text">Девушка подобрала лучший вариант для меня, и по цветовой гамме, и по материалам. Очень доброжелательно и профессионально.</div>
+                        <div class="reviews-slider__text">Девушка подобрала лучший вариант для меня, и по цветовой
+                            гамме, и по материалам. Очень доброжелательно и профессионально.</div>
                         <!-- /.reviews-slider__text -->
-                        <img src="img/reviews/review-1.png" alt="" class="reviews-slider__image"><span class="reviews-slider__name">Ольга Дмитриева,<br /> г.Москва</span> <!-- /.reviews-slider__name -->
+                        <img src="img/reviews/review-1.png" alt="" class="reviews-slider__image"><span
+                            class="reviews-slider__name">Ольга Дмитриева,<br /> г.Москва</span>
+                        <!-- /.reviews-slider__name -->
                     </div>
                     <!-- /.reviews-slider__item -->
                     <div class="reviews-slider__item">
-                        <div class="reviews-slider__text">Понравилась четкость и отлаженность процесса - от подбора именно такого варианта, какой я хотела, до точного соблюдения даты и времени монтажа</div>
+                        <div class="reviews-slider__text">Понравилась четкость и отлаженность процесса - от подбора
+                            именно такого варианта, какой я хотела, до точного соблюдения даты и времени монтажа</div>
                         <!-- /.reviews-slider__text -->
-                        <img src="img/reviews/review-2.png" alt="" class="reviews-slider__image"><span class="reviews-slider__name">Оксана Воробьева,<br /> г.Москва</span> <!-- /.reviews-slider__name -->
+                        <img src="img/reviews/review-2.png" alt="" class="reviews-slider__image"><span
+                            class="reviews-slider__name">Оксана Воробьева,<br /> г.Москва</span>
+                        <!-- /.reviews-slider__name -->
                     </div>
                     <!-- /.reviews-slider__item -->
                     <div class="reviews-slider__item">
-                        <div class="reviews-slider__text">Наша кухня имеет довольно нестандартную конфигурацию. Но даже при этом - все получилось идеально!</div>
+                        <div class="reviews-slider__text">Наша кухня имеет довольно нестандартную конфигурацию. Но даже
+                            при этом - все получилось идеально!</div>
                         <!-- /.reviews-slider__text -->
-                        <img src="img/reviews/review-3.png" alt="" class="reviews-slider__image"><span class="reviews-slider__name">Светлана Плотникова,<br /> г. Москва</span> <!-- /.reviews-slider__name -->
+                        <img src="img/reviews/review-3.png" alt="" class="reviews-slider__image"><span
+                            class="reviews-slider__name">Светлана Плотникова,<br /> г. Москва</span>
+                        <!-- /.reviews-slider__name -->
                     </div>
                     <!-- /.reviews-slider__item -->
                 </div>
@@ -534,23 +594,26 @@
             <div class="container">
                 <div class="offer__block offer-block offer-block_price-bg">
                     <h2 class="offer__title">Ищете где дешевле и лучше?</h2>
-                    <span class="offer__subtitle">Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле - укажите ее и мы пересчитаем с максимальной скидкой </span> <!-- /.offer__subtitle -->
+                    <span class="offer__subtitle">Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле
+                        - укажите ее и мы пересчитаем с максимальной скидкой </span> <!-- /.offer__subtitle -->
                     <form action="" class="form offer__form">
                         <div class="form__row">
-                            <div class="form__group"><input
-                                    type="text" class="input form__input" placeholder="Ваше имя"></div>
-                            <div class="form__group"><input
-                                    type="text" class="input form__input" placeholder="Ваш телефон"></div>
-                            <div class="form__group"><input
-                                    type="text" class="input form__input" placeholder="Ваша цена"></div>
+                            <div class="form__group"><input type="text" class="input form__input"
+                                    placeholder="Ваше имя"></div>
+                            <div class="form__group"><input type="tel" class="input form__input"
+                                    placeholder="Ваш телефон"></div>
+                            <div class="form__group"><input type="text" class="input form__input"
+                                    placeholder="Ваша цена"></div>
                         </div>
                         <div class="form__row">
-      
+
                             <div class="form__group">
-                                <input class="input form__button form__button_price" type="submit" value="Получить расчет со скидкой">
+                                <input class="input form__button form__button_price" type="submit"
+                                    value="Получить расчет со скидкой">
                             </div>
                             <div class="form__group">
-                                <span class="form__policy">Ваши данные надежно защищены.<br />Отправка заявки ни к чему не обязывает.</span>
+                                <span class="form__policy">Ваши данные надежно защищены.<br />Отправка заявки ни к чему
+                                    не обязывает.</span>
                             </div>
                         </div>
                     </form>
@@ -569,9 +632,13 @@
                     </div>
                     <!-- /.factory-block__image -->
                     <div class="factory-block__text">
-                        <p>Существует несколько технологий, по которым производят скинали. Между собой они отличаются по используемому материалу и нанесению рисунка. Естественно, цена на панель будет зависеть от того, какие материалы используются, а также по какой технологии производится скинали.
+                        <p>Существует несколько технологий, по которым производят скинали. Между собой они отличаются по
+                            используемому материалу и нанесению рисунка. Естественно, цена на панель будет зависеть от
+                            того, какие материалы используются, а также по какой технологии производится скинали.
                         </p>
-                        <p>Рисунок может быть нанесен на основу по нескольким технологиям. Для нанесения могут использоваться такие технологии, как фотопечать, матирование стекла, роспись красками и другие способы. Все зависит от того, какой материал используется для основы.</p>
+                        <p>Рисунок может быть нанесен на основу по нескольким технологиям. Для нанесения могут
+                            использоваться такие технологии, как фотопечать, матирование стекла, роспись красками и
+                            другие способы. Все зависит от того, какой материал используется для основы.</p>
                     </div>
                     <!-- /.factory-block__text -->
                 </div>
@@ -580,7 +647,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section factory -->
-        <section class="section contacts">
+        <section id="contacts" class="section contacts">
             <h2 class="section-title section__title">Контакты</h2>
             <div class="contacts-block">
                 <div class="contacts-block__item">
@@ -610,7 +677,8 @@
             <!-- /.contacts-block -->
         </section>
         <div class="map" id="map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A71ddcb73e871b34c4dafab355ce408aedf33172aa2a46e56017f8a42c0e74b4f&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A71ddcb73e871b34c4dafab355ce408aedf33172aa2a46e56017f8a42c0e74b4f&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
         </div>
         <section class="section questions">
             <div class="container">
@@ -653,8 +721,17 @@
         <!-- /.container -->
     </footer>
     <!-- /.footer -->
- 
+
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=4891"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
